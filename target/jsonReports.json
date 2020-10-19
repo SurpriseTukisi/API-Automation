@@ -1,0 +1,143 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-10-16T09:23:53.527Z",
+        "line": 13,
+        "name": "Verify if place is being successfully added using AddPlaceAPI",
+        "description": "",
+        "id": "validating-place-api-s;verify-if-place-is-being-successfully-added-using-addplaceapi;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1624317900,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Add place payload with Hebron, Tswana, and Lethlabile Centre",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Hebron",
+                  "offset": 23
+                },
+                {
+                  "val": "Tswana",
+                  "offset": 31
+                },
+                {
+                  "val": "Lethlabile Centre",
+                  "offset": 43
+                }
+              ],
+              "location": "stepDefinitions.StepDefination.add_place_payload_with_and(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3575903100,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "usercalls \"addPlaceAPI\" with \"post\" http request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"addPlaceAPI\"",
+                  "offset": 10
+                },
+                {
+                  "val": "\"post\"",
+                  "offset": 29
+                }
+              ],
+              "location": "stepDefinitions.StepDefination.usercalls_with_http_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3000100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the API call returns success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 46
+                }
+              ],
+              "location": "stepDefinitions.StepDefination.the_api_call_returns_success_with_status_code(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 715085100,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "\"status\" in response body is \"OK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"status\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"OK\"",
+                  "offset": 29
+                }
+              ],
+              "location": "stepDefinitions.StepDefination.in_response_body_is(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3689656200,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "verify \"place_id\" created maps to Hebron using \"getPlaceAPI\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "place_id",
+                  "offset": 8
+                },
+                {
+                  "val": "Hebron",
+                  "offset": 34
+                },
+                {
+                  "val": "getPlaceAPI",
+                  "offset": 48
+                }
+              ],
+              "location": "stepDefinitions.StepDefination.verify_place_id_created_maps_to_using_getplaceapi(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddPlace"
+          }
+        ]
+      }
+    ],
+    "name": "Validating Place API\u0027s",
+    "description": "",
+    "id": "validating-place-api-s",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/placeValidations.feature",
+    "tags": []
+  }
+]
